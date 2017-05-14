@@ -1,0 +1,40 @@
+C:\Users\lbaldera\documents\visual studio 2010\Projects\CursoExtNet\CursoExtNet\bin\CursoExtNet.dll
+C:\Users\lbaldera\documents\visual studio 2010\Projects\CursoExtNet\CursoExtNet\bin\CursoExtNet.pdb
+C:\Users\lbaldera\documents\visual studio 2010\Projects\CursoExtNet\CursoExtNet\bin\CursoExtNet.xml
+C:\Users\lbaldera\documents\visual studio 2010\Projects\CursoExtNet\CursoExtNet\bin\AutoMapper.dll
+C:\Users\lbaldera\documents\visual studio 2010\Projects\CursoExtNet\CursoExtNet\bin\Ext.Net.dll
+C:\Users\lbaldera\documents\visual studio 2010\Projects\CursoExtNet\CursoExtNet\bin\Ext.Net.Utilities.dll
+C:\Users\lbaldera\documents\visual studio 2010\Projects\CursoExtNet\CursoExtNet\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\lbaldera\documents\visual studio 2010\Projects\CursoExtNet\CursoExtNet\bin\Newtonsoft.Json.dll
+C:\Users\lbaldera\documents\visual studio 2010\Projects\CursoExtNet\CursoExtNet\bin\Transformer.NET.dll
+C:\Users\lbaldera\documents\visual studio 2010\Projects\CursoExtNet\CursoExtNet\bin\WebActivatorEx.dll
+C:\Users\lbaldera\documents\visual studio 2010\Projects\CursoExtNet\CursoExtNet\bin\Ext.Net.xml
+C:\Users\lbaldera\documents\visual studio 2010\Projects\CursoExtNet\CursoExtNet\bin\Ext.Net.Utilities.xml
+C:\Users\lbaldera\documents\visual studio 2010\Projects\CursoExtNet\CursoExtNet\bin\Newtonsoft.Json.xml
+C:\Users\lbaldera\documents\visual studio 2010\Projects\CursoExtNet\CursoExtNet\bin\Transformer.NET.xml
+C:\Users\lbaldera\documents\visual studio 2010\Projects\CursoExtNet\CursoExtNet\obj\Debug\CursoExtNet.vbprojResolveAssemblyReference.cache
+C:\Users\lbaldera\documents\visual studio 2010\Projects\CursoExtNet\CursoExtNet\obj\Debug\CursoExtNet.Resources.resources
+C:\Users\lbaldera\documents\visual studio 2010\Projects\CursoExtNet\CursoExtNet\obj\Debug\CursoExtNet.vbproj.GenerateResource.Cache
+C:\Users\lbaldera\documents\visual studio 2010\Projects\CursoExtNet\CursoExtNet\obj\Debug\CursoExtNet.dll
+C:\Users\lbaldera\documents\visual studio 2010\Projects\CursoExtNet\CursoExtNet\obj\Debug\CursoExtNet.xml
+C:\Users\lbaldera\documents\visual studio 2010\Projects\CursoExtNet\CursoExtNet\obj\Debug\CursoExtNet.pdb
+D:\users\corozco\Downloads\CursoExtNet\CursoExtNet\CursoExtNet\bin\CursoExtNet.dll
+D:\users\corozco\Downloads\CursoExtNet\CursoExtNet\CursoExtNet\bin\CursoExtNet.pdb
+D:\users\corozco\Downloads\CursoExtNet\CursoExtNet\CursoExtNet\bin\CursoExtNet.xml
+D:\users\corozco\Downloads\CursoExtNet\CursoExtNet\CursoExtNet\bin\AutoMapper.dll
+D:\users\corozco\Downloads\CursoExtNet\CursoExtNet\CursoExtNet\bin\Ext.Net.dll
+D:\users\corozco\Downloads\CursoExtNet\CursoExtNet\CursoExtNet\bin\Ext.Net.Utilities.dll
+D:\users\corozco\Downloads\CursoExtNet\CursoExtNet\CursoExtNet\bin\Microsoft.Web.Infrastructure.dll
+D:\users\corozco\Downloads\CursoExtNet\CursoExtNet\CursoExtNet\bin\Newtonsoft.Json.dll
+D:\users\corozco\Downloads\CursoExtNet\CursoExtNet\CursoExtNet\bin\Transformer.NET.dll
+D:\users\corozco\Downloads\CursoExtNet\CursoExtNet\CursoExtNet\bin\WebActivatorEx.dll
+D:\users\corozco\Downloads\CursoExtNet\CursoExtNet\CursoExtNet\bin\Ext.Net.xml
+D:\users\corozco\Downloads\CursoExtNet\CursoExtNet\CursoExtNet\bin\Ext.Net.Utilities.xml
+D:\users\corozco\Downloads\CursoExtNet\CursoExtNet\CursoExtNet\bin\Newtonsoft.Json.xml
+D:\users\corozco\Downloads\CursoExtNet\CursoExtNet\CursoExtNet\bin\Transformer.NET.xml
+D:\users\corozco\Downloads\CursoExtNet\CursoExtNet\CursoExtNet\obj\Debug\CursoExtNet.vbprojResolveAssemblyReference.cache
+D:\users\corozco\Downloads\CursoExtNet\CursoExtNet\CursoExtNet\obj\Debug\CursoExtNet.Resources.resources
+D:\users\corozco\Downloads\CursoExtNet\CursoExtNet\CursoExtNet\obj\Debug\CursoExtNet.vbproj.GenerateResource.Cache
+D:\users\corozco\Downloads\CursoExtNet\CursoExtNet\CursoExtNet\obj\Debug\CursoExtNet.dll
+D:\users\corozco\Downloads\CursoExtNet\CursoExtNet\CursoExtNet\obj\Debug\CursoExtNet.xml
+D:\users\corozco\Downloads\CursoExtNet\CursoExtNet\CursoExtNet\obj\Debug\CursoExtNet.pdb
