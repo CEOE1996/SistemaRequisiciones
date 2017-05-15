@@ -17,4 +17,9 @@
         Return clsSQL.List("SPQ_ProyectoActividad", CommandType.StoredProcedure).toList(Of clsActividad)()
     End Function
 
+    Public Shared Sub Eliminar(ID As Integer)
+        clsSQL.AddParameter("@ID", ID)
+        clsSQL.ExecNonQuery("SPD_Actividad", CommandType.StoredProcedure)
+    End Sub
+
 End Class

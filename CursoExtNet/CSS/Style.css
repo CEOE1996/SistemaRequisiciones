@@ -81,5 +81,6 @@
 .readonly-class input, .readonly-class textarea {
     background-color: #E6E6E6;
     background-image: none;
+    background: #E6E6E6;
     color: Gray;
 }

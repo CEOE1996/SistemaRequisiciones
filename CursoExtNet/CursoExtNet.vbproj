@@ -110,6 +110,7 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Administracion\Cuenta.aspx" />
     <Content Include="Administracion\Usuario.aspx" />
     <Content Include="App_Readme\Ext.NET.Utilities\BREAKING_CHANGES.txt" />
     <Content Include="App_Readme\Ext.NET.Utilities\LICENSE.txt" />
@@ -126,6 +127,13 @@
     <Content Include="Principal.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Proyecto\AgregarProyecto.aspx" />
+    <Content Include="Proyecto\DetalleProyecto.aspx" />
+    <Content Include="Reportes\ReporteMontos.aspx" />
+    <Content Include="Reportes\ReportePeriodos.aspx" />
+    <Content Include="Reportes\ReporteProgramas.aspx" />
+    <Content Include="Requisiciones\AgregarRequisicion.aspx" />
+    <Content Include="Requisiciones\DetalleRequisiciones.aspx" />
+    <Content Include="Requisiciones\EjercerRequisicion.aspx" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
@@ -140,6 +148,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administracion\Cuenta.aspx.designer.vb">
+      <DependentUpon>Cuenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Cuenta.aspx.vb">
+      <DependentUpon>Cuenta.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Administracion\Usuario.aspx.designer.vb">
       <DependentUpon>Usuario.aspx</DependentUpon>
     </Compile>
@@ -154,6 +169,7 @@
     <Compile Include="Clases\clsSQL.vb" />
     <Compile Include="Clases\clsUsuario.vb" />
     <Compile Include="Clases\Extensiones.vb" />
+    <Compile Include="Clases\clsRequisicion.vb" />
     <Compile Include="Clases\VariablesSesion.vb" />
     <Compile Include="Controles\BuscaUsuarioGH.ashx.vb">
       <DependentUpon>BuscaUsuarioGH.ashx</DependentUpon>
@@ -194,6 +210,55 @@
       <DependentUpon>AgregarProyecto.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Proyecto\DetalleProyecto.aspx.designer.vb">
+      <DependentUpon>DetalleProyecto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Proyecto\DetalleProyecto.aspx.vb">
+      <DependentUpon>DetalleProyecto.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteMontos.aspx.designer.vb">
+      <DependentUpon>ReporteMontos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteMontos.aspx.vb">
+      <DependentUpon>ReporteMontos.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReportePeriodos.aspx.designer.vb">
+      <DependentUpon>ReportePeriodos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReportePeriodos.aspx.vb">
+      <DependentUpon>ReportePeriodos.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteProgramas.aspx.designer.vb">
+      <DependentUpon>ReporteProgramas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteProgramas.aspx.vb">
+      <DependentUpon>ReporteProgramas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Requisiciones\AgregarRequisicion.aspx.designer.vb">
+      <DependentUpon>AgregarRequisicion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Requisiciones\AgregarRequisicion.aspx.vb">
+      <DependentUpon>AgregarRequisicion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Requisiciones\DetalleRequisiciones.aspx.designer.vb">
+      <DependentUpon>DetalleRequisiciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Requisiciones\DetalleRequisiciones.aspx.vb">
+      <DependentUpon>DetalleRequisiciones.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Requisiciones\EjercerRequisicion.aspx.designer.vb">
+      <DependentUpon>EjercerRequisicion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Requisiciones\EjercerRequisicion.aspx.vb">
+      <DependentUpon>EjercerRequisicion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Site.Master.designer.vb">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
@@ -211,7 +276,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Readme\Ext.NET\Sample.Web.config" />
+    <Content Include="App_Readme\Ext.NET\Sample.Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Controles\BuscaUsuarioGH.ashx" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -227,8 +294,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Reportes\" />
-    <Folder Include="Requisiciones\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

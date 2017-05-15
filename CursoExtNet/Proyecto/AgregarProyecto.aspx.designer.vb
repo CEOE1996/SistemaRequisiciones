@@ -428,15 +428,6 @@ Partial Public Class AgregarProyecto
     Protected WithEvents mdRecursos As Global.Ext.Net.Model
 
     '''<summary>
-    '''RowExpander1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents RowExpander1 As Global.Ext.Net.RowExpander
-
-    '''<summary>
     '''wdwAddProducto control.
     '''</summary>
     '''<remarks>

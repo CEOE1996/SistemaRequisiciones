@@ -333,14 +333,31 @@
         Return lp_dt
     End Function
 
-    Public Shared Function ObtenModel(dt As DataTable) As DataTable
+    Public Shared Function ObtenModel(dt As DataTable, Optional Order As Boolean = False) As DataTable
         Dim lp_dt As New DataTable
         Dim lp_row As String
+        Dim LongitudMaxima As Integer = 0
         lp_dt.Columns.Add("propiedad")
 
-        
+
         For Each item As DataColumn In dt.Columns
-            lp_row = "<ext:ModelField Name='" & item.ColumnName & "' Type='" & TipoDato(Replace(item.DataType.ToString(), "System.", "")) & "' />"
+            If Order Then
+                For Each MyColumn As DataColumn In dt.Columns
+                    If LongitudMaxima < MyColumn.ColumnName.Length Then
+                        LongitudMaxima = MyColumn.ColumnName.Length
+                    End If
+                Next
+
+                lp_row = "<ext:ModelField Name='" & item.ColumnName & "'"
+                For X As Integer = item.ColumnName.Length To LongitudMaxima
+                    lp_row += " "
+                Next
+                lp_row += " Type='" & TipoDato(Replace(item.DataType.ToString(), "System.", "")) & "' />"
+
+            Else
+                lp_row = "<ext:ModelField Name='" & item.ColumnName & "' Type='" & TipoDato(Replace(item.DataType.ToString(), "System.", "")) & "' />"
+            End If
+
             lp_row = lp_row.Replace("'", Chr(34))
             lp_dt.Rows.Add(lp_row)
         Next
@@ -368,13 +385,29 @@
         Return lp_Resultado
     End Function
     
-    Public Shared Function ObtenColumns(dt As DataTable) As DataTable
+    Public Shared Function ObtenColumns(dt As DataTable, Optional Order As Boolean = False) As DataTable
         Dim lp_dt As New DataTable
         Dim lp_row As String
+        Dim LongitudMaxima As Integer = 0
         lp_dt.Columns.Add("propiedad")
 
         For Each item As DataColumn In dt.Columns
-            lp_row = "<ext:Column ID='" & item.ColumnName & "' runat='server' Text='" & item.ColumnName & "' DataIndex='" & item.ColumnName & "'/>"
+            If Order Then
+                For Each MyColumn As DataColumn In dt.Columns
+                    If LongitudMaxima < MyColumn.ColumnName.Length Then
+                        LongitudMaxima = MyColumn.ColumnName.Length
+                    End If
+                Next
+
+                lp_row = "<ext:Column runat='server' DataIndex='" & item.ColumnName & "'"
+                For X As Integer = item.ColumnName.Length To LongitudMaxima
+                    lp_row += " "
+                Next
+                lp_row += " Text='" & item.ColumnName & "'/>"
+            Else
+                lp_row = "<ext:Column ID='" & item.ColumnName & "' runat='server' Text='" & item.ColumnName & "' DataIndex='" & item.ColumnName & "'/>"
+            End If
+
             lp_row = lp_row.Replace("'", Chr(34))
 
             lp_dt.Rows.Add(lp_row)

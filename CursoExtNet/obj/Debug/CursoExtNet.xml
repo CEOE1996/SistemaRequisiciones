@@ -79,6 +79,270 @@ To modify move field declaration from designer file to code-behind file.
  Module used to define the properties that are available in the My Namespace for Web projects.
  </summary>
 	<remarks></remarks>
+</member><member name="F:CursoExtNet.DetalleProyecto.gpDetalle">
+	<summary>
+gpDetalle control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.DetalleProyecto.btnDetalle">
+	<summary>
+btnDetalle control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.DetalleProyecto.btnModificar">
+	<summary>
+btnModificar control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.DetalleProyecto.btnMontos">
+	<summary>
+btnMontos control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.DetalleProyecto.stDetalle">
+	<summary>
+stDetalle control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.DetalleProyecto.mdDetalle">
+	<summary>
+mdDetalle control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.AgregarRequisicion.frmRequisiciones">
+	<summary>
+frmRequisiciones control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.AgregarRequisicion.hdID">
+	<summary>
+hdID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.AgregarRequisicion.fsInfo">
+	<summary>
+fsInfo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.AgregarRequisicion.txtArea">
+	<summary>
+txtArea control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.AgregarRequisicion.dtfFecha">
+	<summary>
+dtfFecha control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.AgregarRequisicion.txtObservaciones">
+	<summary>
+txtObservaciones control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.AgregarRequisicion.fsProyecto">
+	<summary>
+fsProyecto control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.AgregarRequisicion.cboProyecto">
+	<summary>
+cboProyecto control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.AgregarRequisicion.stProyecto">
+	<summary>
+stProyecto control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.AgregarRequisicion.mdProyecto">
+	<summary>
+mdProyecto control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.AgregarRequisicion.cboActividad">
+	<summary>
+cboActividad control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.AgregarRequisicion.stActividad">
+	<summary>
+stActividad control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.AgregarRequisicion.mdActividad">
+	<summary>
+mdActividad control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.AgregarRequisicion.cboRecurso">
+	<summary>
+cboRecurso control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.AgregarRequisicion.stRecurso">
+	<summary>
+stRecurso control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.AgregarRequisicion.mdRecurso">
+	<summary>
+mdRecurso control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.AgregarRequisicion.gpDetalle">
+	<summary>
+gpDetalle control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.AgregarRequisicion.cboProducto">
+	<summary>
+cboProducto control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.AgregarRequisicion.stProducto">
+	<summary>
+stProducto control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.AgregarRequisicion.mdProcucto">
+	<summary>
+mdProcucto control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.AgregarRequisicion.txtCantidad">
+	<summary>
+txtCantidad control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.AgregarRequisicion.btnAgregar">
+	<summary>
+btnAgregar control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.AgregarRequisicion.btnEliminar">
+	<summary>
+btnEliminar control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.AgregarRequisicion.stDetalle">
+	<summary>
+stDetalle control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.AgregarRequisicion.mdDetalle">
+	<summary>
+mdDetalle control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.AgregarRequisicion.btnGuardar">
+	<summary>
+btnGuardar control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.AgregarRequisicion.btnSolicitar">
+	<summary>
+btnSolicitar control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
 </member><member name="F:CursoExtNet.Site.HeadContent">
 	<summary>
 HeadContent control.
@@ -490,14 +754,6 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:CursoExtNet.AgregarProyecto.mdRecursos">
 	<summary>
 mdRecursos control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CursoExtNet.AgregarProyecto.RowExpander1">
-	<summary>
-RowExpander1 control.
 </summary>
 	<remarks>
 Auto-generated field.

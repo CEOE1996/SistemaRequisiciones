@@ -35,6 +35,11 @@
         clsSQL.ExecNonQuery("SPU_Proyecto", CommandType.StoredProcedure)
     End Sub
 
-
+    Public Shared Function List(Optional ID As Integer = 0) As List(Of clsProyecto)
+        If ID <> 0 Then
+            clsSQL.AddParameter("@ID", ID)
+        End If
+        Return clsSQL.List("SPQ_Proyecto", CommandType.StoredProcedure).toList(Of clsProyecto)()
+    End Function
 
 End Class

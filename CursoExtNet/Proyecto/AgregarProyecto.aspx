@@ -28,7 +28,7 @@
                             </ext:FieldContainer>
                             <ext:FieldContainer runat="server" Layout="HBoxLayout" Anchor="100%" AnchorHorizontal="100%" DefaultAnchor="100%" >
                                 <Items>
-                                    <ext:TextArea       ID="txtDescripcion" runat="server"  FieldLabel="Descripción del Proyecto"   Margin="5" Flex="1" LabelWidth="125"/>
+                                    <ext:TextArea       ID="txtDescripcion" runat="server"  FieldLabel="Descripción del Proyecto"   Margin="5" Flex="1" LabelWidth="125" ReadOnlyCls="readonly-class"/>
                                 </Items>
                             </ext:FieldContainer>
                         </Items>
@@ -44,7 +44,7 @@
                             </ext:FieldContainer>
                         </Items>
                     </ext:FieldSet>
-                    <ext:GridPanel ID="gpActividades" runat="server" Title="Actividades" TitleAlign="Center" Margin="5" Layout="AnchorLayout">
+                    <ext:GridPanel ID="gpActividades" runat="server" Title="Actividades" TitleAlign="Center" Margin="5" Layout="AnchorLayout" Scroll="Both">
                         <TopBar>
                             <ext:Toolbar runat="server">
                                 <Items>
@@ -59,7 +59,18 @@
                                         </DirectEvents>
                                     </ext:Button>
                                     <ext:Button ID="btnDelete" runat="server" Text="Eliminar" Icon="Delete">
-                                    
+                                        <DirectEvents>
+                                            <Click OnEvent="btnDelete_Click">
+                                                <EventMask ShowMask="true" />
+                                                <Confirmation Title="Eliminar Actividad" Message="¿Desea Eliminar la Actividad" ConfirmRequest="true" />
+                                                 <ExtraParams>
+                                                    <ext:Parameter Name="ID" Value="#{gpActividades}.selModel.selected.items[0].data.ID" Mode="Raw" />
+                                                </ExtraParams>                                                
+                                            </Click>
+                                        </DirectEvents>
+                                        <Listeners>
+                                            <Click Handler="return #{gpActividades}.hasSelection();" />
+                                        </Listeners>
                                     </ext:Button>
                                 </Items>
                             </ext:Toolbar>
@@ -120,7 +131,11 @@
                         </ColumnModel>
                         <Plugins>
                             <ext:RowExpander runat="server">
-                                
+                                <Loader runat="server" DirectMethod="#{DirectMethods}.GetRecursos" Mode="Component">
+                                    <Params>
+                                        <ext:Parameter Name="ID"   Value="this.record.data.ID" Mode="Raw" />
+                                    </Params>
+                                </Loader>
                             </ext:RowExpander>
                         </Plugins>
                     </ext:GridPanel>
@@ -169,7 +184,12 @@
                         </DirectEvents>
                     </ext:Button>
                     <ext:Button ID="btnConcluir" runat="server" Text="Concluir" Icon="PlayGreen" Margin="5">
-                        
+                        <DirectEvents>
+                            <Click OnEvent="btnConcluir_Click">
+                                <EventMask ShowMask="true" />
+                                <Confirmation Message="¿Deseas Concluir la Captura del Proyecto?" Title="Concluir" ConfirmRequest="true" />
+                            </Click>
+                        </DirectEvents>
                     </ext:Button>
                 </Buttons>
             </ext:FormPanel>
@@ -185,7 +205,7 @@
                             <ext:TextField ID="txtRAct"     runat="server" FieldLabel="Actividad"    Margin="5" Flex="1" ReadOnly="true" AnchorHorizontal="100%" DefaultAnchor="100%" />                        
                         </Items>
                     </ext:FieldSet>
-                    <ext:GridPanel ID="gpUsuarios" runat="server" Title="Listado de Usuarios" TitleAlign="Center" Layout="AnchorLayout" DefaultAnchor="100%" AnchorHorizontal="100%" AnchorVertical="80%">
+                    <ext:GridPanel ID="gpUsuarios" runat="server" Title="Listado de Usuarios" TitleAlign="Center" Layout="AnchorLayout" DefaultAnchor="100%" AnchorHorizontal="100%" AnchorVertical="80%" Scroll="Both">
                         <TopBar>
                             <ext:Toolbar runat="server">
                                 <Items>
@@ -272,16 +292,18 @@
     </ext:Window>
 
     <ext:Window ID="wdwRecursos" runat="server" Title="Recursos" TitleAlign="Center" Modal="true" Hidden="true" Layout="AnchorLayout" Width="800px" Height="500px" >
+        <TopBar>
+            <ext:Toolbar runat="server">
+                <Items>
+                    <ext:TextField ID="txtRecIDAct"   runat="server" FieldLabel="ID Actividad" Margin="5" ReadOnly="true" />
+                    <ext:TextField ID="txtRecAct"     runat="server" FieldLabel="Actividad"    Margin="5" Flex="1" ReadOnly="true" AnchorHorizontal="100%" DefaultAnchor="100%" />                        
+                </Items>
+            </ext:Toolbar>
+        </TopBar>
         <Items>
-            <ext:FormPanel runat="server" Layout="AnchorLayout" DefaultAnchor="100" AnchorHorizontal="100%" AnchorVertical="100%" BodyPadding="5" Margin="5">
-                <Items>                                    
-                    <ext:FieldSet runat="server" Title="Detalle Actividad" Margin="5" Anchor="100%" AnchorHorizontal="100%" DefaultAnchor="100%">
-                        <Items>
-                            <ext:TextField ID="txtRecIDAct"   runat="server" FieldLabel="ID Actividad" Margin="5" Flex="1" ReadOnly="true" AnchorHorizontal="100%" DefaultAnchor="100%"/>
-                            <ext:TextField ID="txtRecAct"     runat="server" FieldLabel="Actividad"    Margin="5" Flex="1" ReadOnly="true" AnchorHorizontal="100%" DefaultAnchor="100%" />                        
-                        </Items>
-                    </ext:FieldSet>
-                    <ext:FieldSet runat="server" Title="Agregar Recurso" Margin="5" Anchor="100%" AnchorHorizontal="100%" DefaultAnchor="100%">
+            <ext:FormPanel runat="server" Layout="AnchorLayout" DefaultAnchor="100" AnchorHorizontal="100%" AnchorVertical="100%" BodyPadding="5" Margins="0 5">
+                <Items>                                                        
+                    <ext:FieldSet runat="server" Title="Agregar Recurso" Margins="5 0" Anchor="100%" AnchorHorizontal="100%" DefaultAnchor="100%">
                         <Items>
                             <ext:TextField ID="txtTipo"         runat="server" FieldLabel="Tipo Recurso" Margin="5" Flex="1" AnchorHorizontal="100%" DefaultAnchor="100%"/>
                             <ext:FieldContainer runat="server" Layout="HBoxLayout" Anchor="100%" AnchorHorizontal="100%" DefaultAnchor="100%" >
@@ -290,10 +312,10 @@
                                     <ext:NumberField ID="txtMonto" runat="server" FieldLabel="Monto"      Margin="5" Flex="1" AllowDecimals="true" DecimalPrecision="2"/>                                    
                                 </Items>
                             </ext:FieldContainer>
-                            <ext:TextArea ID="txtDescRecurso"     runat="server" FieldLabel="Descripción"    Margin="5" Flex="1" AnchorHorizontal="100%" DefaultAnchor="100%" />                        
+                            <ext:TextArea ID="txtDescRecurso"     runat="server" FieldLabel="Descripción"    Margin="5" Flex="1" AnchorHorizontal="100%" DefaultAnchor="100%" ReadOnlyCls="readonly-class" />                        
                         </Items>
                     </ext:FieldSet>
-                    <ext:GridPanel ID="gpRecursos" runat="server" Title="Listado de Recursos" TitleAlign="Center" Layout="AnchorLayout" DefaultAnchor="100%" AnchorHorizontal="100%" AnchorVertical="40%">
+                    <ext:GridPanel ID="gpRecursos" runat="server" Layout="AnchorLayout" DefaultAnchor="100%" AnchorHorizontal="100%" AnchorVertical="58%" Scroll="Both">
                         <TopBar>
                             <ext:Toolbar runat="server">
                                 <Items>
@@ -373,9 +395,11 @@
                             </Columns>
                         </ColumnModel>
                         <Plugins>
-                            <ext:RowExpander ID="RowExpander1" runat="server">
-                                <Loader>
-                        
+                            <ext:RowExpander runat="server">
+                                <Loader runat="server" DirectMethod="#{DirectMethods}.GetProductos" Mode="Component">
+                                    <Params>
+                                        <ext:Parameter Name="ID"   Value="this.record.data.ID" Mode="Raw" />
+                                    </Params>
                                 </Loader>
                             </ext:RowExpander>
                         </Plugins>
@@ -396,7 +420,7 @@
             <ext:FormPanel runat="server" Layout="AnchorLayout" AnchorHorizontal="100%" AnchorVertical="100%" DefaultAnchor="100%" BodyPadding="5" Margin="5">
                 <Items>
                     <ext:Hidden ID="hdIDRec" runat="server" />
-                    <ext:TextArea ID="txtAddProducto" runat="server" FieldLabel="Descripción" Flex="1" AnchorVertical="100%" DefaultAnchor="100%" Margin="5" />
+                    <ext:TextArea ID="txtAddProducto" runat="server" FieldLabel="Descripción" Flex="1" AnchorVertical="100%" DefaultAnchor="100%" Margin="5" ReadOnlyCls="readonly-class" />
                     <ext:NumberField ID="txtCantidad" runat="server" FieldLabel="Cantidad" AnchorVertical="100%" DefaultAnchor="100%"  Margin="5"  AllowDecimals="false"/>
                 </Items>
             </ext:FormPanel>

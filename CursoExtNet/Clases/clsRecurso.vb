@@ -24,4 +24,5 @@
         clsSQL.AddParameter("@ID", ID)
         clsSQL.ExecNonQuery("SPD_Recurso", CommandType.StoredProcedure)
     End Sub
+
 End Class
