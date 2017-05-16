@@ -6,7 +6,31 @@ CursoExtNet
 </name>
 </assembly>
 <members>
-<member name="F:CursoExtNet.Usuario.gpUsuario">
+<member name="F:CursoExtNet.DetalleRequisiciones.gpDetalle">
+	<summary>
+gpDetalle control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.DetalleRequisiciones.stDetalle">
+	<summary>
+stDetalle control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.DetalleRequisiciones.mdDetalle">
+	<summary>
+mdDetalle control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CursoExtNet.Usuario.gpUsuario">
 	<summary>
 gpUsuario control.
 </summary>

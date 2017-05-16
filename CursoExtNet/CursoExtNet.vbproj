@@ -243,7 +243,7 @@
     </Compile>
     <Compile Include="Requisiciones\AgregarRequisicion.aspx.vb">
       <DependentUpon>AgregarRequisicion.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Requisiciones\DetalleRequisiciones.aspx.designer.vb">
       <DependentUpon>DetalleRequisiciones.aspx</DependentUpon>

@@ -42,4 +42,9 @@
         Return clsSQL.List("SPQ_Proyecto", CommandType.StoredProcedure).toList(Of clsProyecto)()
     End Function
 
+    Public Shared Function ListRequisicion() As List(Of clsProyecto)
+        clsSQL.AddParameter("@Usuario", VariablesSesion.ID)
+        Return clsSQL.List("SPQ_RequisicionProyecto", CommandType.StoredProcedure).toList(Of clsProyecto)()
+    End Function
+
 End Class

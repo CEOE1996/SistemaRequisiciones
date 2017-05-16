@@ -15,26 +15,30 @@
                                     <ext:DateField  ID="dtfFecha"   runat="server" FieldLabel="Fecha"   Margin="5" Flex="1" ReadOnly="true" />
                                 </items>
                             </ext:FieldContainer>
-                            <ext:TextArea ID="txtObservaciones" runat="server" FieldLabel="Observacionens" Margin="5" AnchorHorizontal="100%" DefaultAnchor="100%" />
+                            <ext:TextArea ID="txtObservaciones" runat="server" FieldLabel="Observaciones" Margin="5" AnchorHorizontal="100%" DefaultAnchor="100%" />
                         </Items>
                     </ext:FieldSet>
                     <ext:FieldSet ID="fsProyecto" runat="server" Title="Información Del Proyecto" Margin="5">
                         <Items>
                             <ext:FieldContainer runat="server" Layout="HBoxLayout" Anchor="100%" AnchorHorizontal="100%" DefaultAnchor="100%" >
                                 <Items>
-                                    <ext:ComboBox   ID="cboProyecto"    runat="server" FieldLabel="Proyecto"    Margin="5" Flex="1" Editable="false" ForceSelection="true" ValueField="ID" DisplayField="Descripcion" >
+                                    <ext:ComboBox   ID="cboProyecto"    runat="server" FieldLabel="Proyecto"    Margin="5" Flex="1" Editable="false" ForceSelection="true" ValueField="ID" DisplayField="Nombre" >
                                         <Store>
                                             <ext:Store ID="stProyecto" runat="server">
                                                 <Model>
                                                     <ext:Model ID="mdProyecto" runat="server">
                                                         <Fields>
                                                             <ext:ModelField Name="ID" />
-                                                            <ext:ModelField Name="Descripcion" />
+                                                            <ext:ModelField Name="Nombre" />
+                                                            <ext:ModelField Name="Clave" />
                                                         </Fields>
                                                     </ext:Model>
                                                 </Model>
                                             </ext:Store>
                                         </Store>
+                                        <Listeners>
+                                            <Select Handler="App.direct.SelectProyecto()" />
+                                        </Listeners>
                                     </ext:ComboBox>
                                     <ext:ComboBox   ID="cboActividad"   runat="server" FieldLabel="Actividad"   Margin="5" Flex="1" Editable="false" ForceSelection="true" ValueField="ID" DisplayField="Descripcion" >
                                         <Store>
@@ -43,12 +47,16 @@
                                                     <ext:Model ID="mdActividad" runat="server">
                                                         <Fields>
                                                             <ext:ModelField Name="ID" />
+                                                            <ext:ModelField Name="IDActividad" />
                                                             <ext:ModelField Name="Descripcion" />
                                                         </Fields>
                                                     </ext:Model>
                                                 </Model>
                                             </ext:Store>
                                         </Store>
+                                        <Listeners>
+                                            <Select Handler="App.direct.SelectActividad()" />
+                                        </Listeners>
                                     </ext:ComboBox>
                                     <ext:ComboBox   ID="cboRecurso"     runat="server" FieldLabel="Recurso"     Margin="5" Flex="1" Editable="false" ForceSelection="true" ValueField="ID" DisplayField="Descripcion" >
                                         <Store>
@@ -57,12 +65,16 @@
                                                     <ext:Model ID="mdRecurso" runat="server">
                                                         <Fields>
                                                             <ext:ModelField Name="ID" />
+                                                            <ext:ModelField Name="IDRecurso" />
                                                             <ext:ModelField Name="Descripcion" />
                                                         </Fields>
                                                     </ext:Model>
                                                 </Model>
                                             </ext:Store>
                                         </Store>
+                                        <Listeners>
+                                            <Select Handler="App.direct.SelectRecurso()" />
+                                        </Listeners>
                                     </ext:ComboBox>
                                 </Items>
                             </ext:FieldContainer>
@@ -89,10 +101,25 @@
                                     <ext:NumberField ID="txtCantidad" runat="server" FieldLabel="Cantidad" Margin="5" AllowDecimals="true" />
                                     <ext:ToolbarFill runat="server" />
                                     <ext:Button ID="btnAgregar" runat="server" Text="Agregar" Icon="Add" Margin="5">
-                                    
+                                        <DirectEvents>
+                                            <Click OnEvent="btnAgregar_Click">
+                                                <EventMask ShowMask="true" />
+                                            </Click>
+                                        </DirectEvents>
                                     </ext:Button>
                                     <ext:Button ID="btnEliminar" runat="server" Text="Eliminar" Icon="Delete" Margin="5">
-                                    
+                                        <DirectEvents>
+                                            <Click OnEvent="btnEliminar_Click">
+                                                <EventMask ShowMask="true" />
+                                                <ExtraParams>
+                                                    <ext:Parameter Name="ID" Value="#{gpDetalle}.selModel.selected.items[0].data.ID" Mode="Raw" />
+                                                </ExtraParams>
+                                                <Confirmation Message="¿Deseas Borrar Este Producto?" Title="Eliminar" ConfirmRequest="true" />
+                                            </Click>
+                                        </DirectEvents>
+                                        <Listeners>
+                                            <Click Handler="return #{gpDetalle}.hasSelection();" />
+                                        </Listeners>
                                     </ext:Button>
                                 </Items>
                             </ext:Toolbar>
@@ -121,10 +148,19 @@
                 </Items>
                 <Buttons>
                     <ext:Button ID="btnGuardar" runat="server" Text="Guardar" Icon="Disk" Margin="5">
-                    
+                        <DirectEvents>
+                            <Click OnEvent="btnGuardar_Click">
+                                <EventMask ShowMask="true" />
+                            </Click>
+                        </DirectEvents>
                     </ext:Button>
                     <ext:Button ID="btnSolicitar" runat="server" Text="Solicitar" Icon="PlayGreen" Margin="5">
-                    
+                        <DirectEvents>
+                            <Click OnEvent="btnSolicitar_Click">
+                                <EventMask ShowMask="true" />
+                                <Confirmation Message="¿Deseas Solicitar Autorización?" Title="Autorizar" ConfirmRequest="true" />
+                            </Click>
+                        </DirectEvents>
                     </ext:Button>
                 </Buttons>
             </ext:FormPanel>

@@ -22,4 +22,10 @@
         clsSQL.ExecNonQuery("SPD_Actividad", CommandType.StoredProcedure)
     End Sub
 
+    Public Shared Function ListRequisicion(Proyecto As Integer) As List(Of clsActividad)
+        clsSQL.AddParameter("@Usuario", VariablesSesion.ID)
+        clsSQL.AddParameter("@Proyecto", Proyecto)
+        Return clsSQL.List("SPQ_RequisicionActividad", CommandType.StoredProcedure).toList(Of clsActividad)()
+    End Function
+
 End Class
