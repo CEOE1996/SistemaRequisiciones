@@ -23,6 +23,24 @@ Partial Public Class DetalleRequisiciones
     Protected WithEvents gpDetalle As Global.Ext.Net.GridPanel
 
     '''<summary>
+    '''btnAutorizar control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnAutorizar As Global.Ext.Net.Button
+
+    '''<summary>
+    '''btnModificar control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnModificar As Global.Ext.Net.Button
+
+    '''<summary>
     '''stDetalle control.
     '''</summary>
     '''<remarks>
@@ -39,4 +57,58 @@ Partial Public Class DetalleRequisiciones
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents mdDetalle As Global.Ext.Net.Model
+
+    '''<summary>
+    '''wdwAutorizar control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents wdwAutorizar As Global.Ext.Net.Window
+
+    '''<summary>
+    '''hdID control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents hdID As Global.Ext.Net.Hidden
+
+    '''<summary>
+    '''cboEstado control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents cboEstado As Global.Ext.Net.ComboBox
+
+    '''<summary>
+    '''stEstado control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents stEstado As Global.Ext.Net.Store
+
+    '''<summary>
+    '''mdEstado control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents mdEstado As Global.Ext.Net.Model
+
+    '''<summary>
+    '''btnChangeEstatus control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnChangeEstatus As Global.Ext.Net.Button
 End Class

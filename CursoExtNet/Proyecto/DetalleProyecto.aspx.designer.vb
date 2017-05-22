@@ -23,33 +23,6 @@ Partial Public Class DetalleProyecto
     Protected WithEvents gpDetalle As Global.Ext.Net.GridPanel
 
     '''<summary>
-    '''btnDetalle control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btnDetalle As Global.Ext.Net.Button
-
-    '''<summary>
-    '''btnModificar control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btnModificar As Global.Ext.Net.Button
-
-    '''<summary>
-    '''btnMontos control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btnMontos As Global.Ext.Net.Button
-
-    '''<summary>
     '''stDetalle control.
     '''</summary>
     '''<remarks>

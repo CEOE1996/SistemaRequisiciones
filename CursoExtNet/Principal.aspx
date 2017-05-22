@@ -26,14 +26,14 @@
 
         <ext:Viewport ID="Viewport1" runat="server" Layout="BorderLayout">
             <Items>
-                <ext:Panel runat="server" ID="pnlSuperior" Region="North" Height="117" MarginSpec="2 2 0 2" MinWidth="800">
+                <ext:Panel runat="server" ID="pnlSuperior" Region="North" Height="117" MarginSpec="2 2 0 2" MinWidth="800"><%--117--%>
                     <Content>
                         <table style="width:100%; margin:0 0 0 0; border-spacing:0; border-collapse:collapse;">
                             <tr>
                                 <td class="titulo" style="width:200px; height:50px">
                                     <asp:Image ID="Image1" runat="server" ImageUrl="~/Imagenes/logo.png"/>
                                 </td>
-                                <td class="titulo" style="padding-right:240px; text-align:center">
+                                <td class="titulo" style="padding-right:240px; text-align:center;">
                                     Sistema de Requisiciones
                                 </td>
                             </tr>
@@ -83,7 +83,35 @@
                         </Click>                                                                    
                     </DirectEvents>                                
                 </ext:Button>
+                <ext:Button ID="btnRegistrar" runat="server" Text="Registrarse" Icon="UserAdd">
+                    <Listeners>
+                        <Click Handler="#{wdwTipoUsuario}.show();" />
+                    </Listeners>
+                </ext:Button>
             </Buttons>  
+        </ext:Window>
+        <ext:Window ID="wdwTipoUsuario" runat="server" Title="Registrar Usuario" Hidden="true" Modal="true" Layout="AnchorLayout" Width="400px">
+            <Items>
+                <ext:FormPanel runat="server" BodyPadding="5" Margin="5" AnchorHorizontal="100%" AnchorVertical="100%" DefaultAnchor="100%">
+                    <Items>
+                        <ext:TextField  ID="txtCodigo"      runat="server" FieldLabel="Código"               Flex="1" />
+                        <ext:TextField  ID="Nombre"         runat="server" FieldLabel="Nombre"               Flex="1" />
+                        <ext:TextField  ID="Telefono"       runat="server" FieldLabel="Telefono"             Flex="1" />
+                        <ext:TextField  ID="Correo"         runat="server" FieldLabel="Correo"               Flex="1" />
+                        <ext:ComboBox   ID="cboTipoUsuario" runat="server" FieldLabel="Tipo Usuario"         Flex="1" />
+                        <ext:TextField  ID="TextField1"     runat="server" FieldLabel="Contraseña"           Flex="1" />
+                        <ext:TextField  ID="TextField2"     runat="server" FieldLabel="Confirmar Contraseña" Flex="1" />
+                    </Items>
+                </ext:FormPanel>
+            </Items>
+            <Buttons>
+                <ext:Button ID="btnAceptar" runat="server" Icon="UserAdd" Text="Solicitar Autorización">
+                
+                </ext:Button>                
+                <ext:Button ID="btnCancelar" runat="server" Icon="UserCross" Text="Cancelar">
+                   
+                </ext:Button>
+            </Buttons>
         </ext:Window>
     </div>
     </form>

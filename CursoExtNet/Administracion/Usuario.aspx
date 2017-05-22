@@ -13,7 +13,9 @@
                             
                             </ext:Button>
                             <ext:Button ID="btnModificar" runat="server" Text="Modificar Usuario" Icon="UserEdit" Margin="5">
-                            
+                                <Listeners>
+                                    <Click Handler="#{wdwTipoUsuario}.show();" />
+                                </Listeners>
                             </ext:Button>
                         </Items>
                     </ext:Toolbar>
@@ -56,7 +58,29 @@
                 <BottomBar>
                     <ext:PagingToolbar runat="server" />
                 </BottomBar>
-            </ext:GridPanel>
+            </ext:GridPanel>            
+            <ext:Window ID="wdwTipoUsuario" runat="server" Title="Registrar Usuario" Hidden="true" Modal="true" Layout="AnchorLayout" Width="400px">
+            <Items>
+                <ext:FormPanel runat="server" BodyPadding="5" Margin="5" AnchorHorizontal="100%" AnchorVertical="100%" DefaultAnchor="100%">
+                    <Items>
+                        <ext:TextField  ID="txtCodigo"      runat="server" FieldLabel="Código"       Flex="1" />
+                        <ext:TextField  ID="Nombre"         runat="server" FieldLabel="Nombre"       Flex="1" />
+                        <ext:TextField  ID="Telefono"       runat="server" FieldLabel="Telefono"     Flex="1" />
+                        <ext:TextField  ID="Correo"         runat="server" FieldLabel="Correo"       Flex="1" />
+                        <ext:ComboBox   ID="cboTipoUsuario" runat="server" FieldLabel="Tipo Usuario" Flex="1" />
+                        <ext:ComboBox   ID="cboEstatus"     runat="server" FieldLabel="Estatus"      Flex="1" />                        
+                    </Items>
+                </ext:FormPanel>
+            </Items>
+            <Buttons>
+                <ext:Button ID="btnAceptar" runat="server" Icon="UserAdd" Text="Aceptar">
+                
+                </ext:Button>                
+                <ext:Button ID="btnCancelar" runat="server" Icon="UserCross" Text="Cancelar">
+                   
+                </ext:Button>
+            </Buttons>
+        </ext:Window>
         </Content>
-    </ext:Viewport>
+    </ext:Viewport>    
 </asp:Content>

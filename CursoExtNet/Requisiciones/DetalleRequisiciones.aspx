@@ -10,9 +10,20 @@
                         <Items>
                             <ext:ToolbarFill runat="server" />
                             <ext:Button ID="btnAutorizar" runat="server" Text="Autorizar" Icon="Accept" Margin="5">
-                            
+                                <DirectEvents>
+                                    <Click OnEvent="btnAutorizar_Click">
+                                        <EventMask ShowMask="true" />
+                                        <ExtraParams>
+                                            <ext:Parameter Name="ID" Value="#{gpDetalle}.selModel.selected.items[0].data.ID" Mode="Raw" />
+                                            <ext:Parameter Name="Estatus" Value="#{gpDetalle}.selModel.selected.items[0].data.IDEstatus" Mode="Raw" />
+                                        </ExtraParams>
+                                    </Click>
+                                </DirectEvents>
+                                <Listeners>
+                                    <Click Handler="return #{gpDetalle}.hasSelection();" />
+                                </Listeners>
                             </ext:Button>
-                            <ext:Button ID="btnModificar" runat="server" Text="Modificar" Icon="ApplicationEdit" Margin="5">
+                            <ext:Button ID="btnModificar" runat="server" Text="Modificar" Icon="ApplicationEdit" Margin="5" Visible="false">
                             
                             </ext:Button>
                         </Items>
@@ -61,4 +72,33 @@
             </ext:GridPanel>
         </Content>
     </ext:Viewport>
+    <ext:Window ID="wdwAutorizar" runat="server" Title="Autorizar Requisición" TitleAlign="Center" Modal="true" Hidden="true" Width="300px" Height="150px">
+        <Items>
+            <ext:Hidden ID="hdID" runat="server" />
+            <ext:ComboBox ID="cboEstado" runat="server" FieldLabel="Estatus" Margin="5" AnchorHorizontal="100%" DefaultAnchor="100%" DisplayField="Estatus" ValueField="ID" Flex="1">
+                <Store>
+                    <ext:Store ID="stEstado" runat="server">
+                        <Model>
+                            <ext:Model ID="mdEstado" runat="server">
+                                <Fields>
+                                    <ext:ModelField Name="ID" />
+                                    <ext:ModelField Name="Estatus" />
+                                </Fields>
+                            </ext:Model>
+                        </Model>
+                    </ext:Store>
+                </Store>
+            </ext:ComboBox>
+        </Items>
+        <Buttons>
+            <ext:Button ID="btnChangeEstatus" runat="server" Text="Autorizar" Margin="5">
+                <DirectEvents>
+                    <Click OnEvent="btnChangeEstatus_Click">
+                        <EventMask ShowMask="true" />
+                        <Confirmation Message="¿Deseas Cambiar a Este Estatus?" Title="Autorizar" ConfirmRequest="true" />
+                    </Click>
+                </DirectEvents>
+            </ext:Button>
+        </Buttons>
+    </ext:Window>
 </asp:Content>
